@@ -159,6 +159,10 @@ void StanleyController::computePID(double target, double current){
 
 void StanleyController::computeSteeringAngle(double current_yaw, double v){
     current_yaw = GetNormaliceAngle(current_yaw);
+    // Check if target_idx is valid
+    if (target_idx <= 0 || target_idx >= new_waypoints.size()) {
+        return;
+    }
     double yaw_target = std::atan2(new_waypoints[target_idx][1]-new_waypoints[target_idx-1][1], new_waypoints[target_idx][0]-new_waypoints[target_idx-1][0]);
     double yaw_target2 = new_waypoints[target_idx](2);
     yaw_target = GetNormaliceAngle(yaw_target);
