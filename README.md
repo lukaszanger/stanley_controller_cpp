@@ -9,6 +9,7 @@ Stanley control in C++
 docker build -t stanley_controller_cpp docker/
 ```
 ### Start Docker Container
+Checkout "docker-run": https://github.com/ika-rwth-aachen/docker-run
 ```bash
 # stanley_controller_cpp
 docker-run --mwd stanley_controller_cpp:latest
