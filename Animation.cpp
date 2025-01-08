@@ -52,7 +52,7 @@ void animation_car(const std::vector<Eigen::VectorXd> waypoints,const std::vecto
     int iterations = 100;
     for (int i = 0; i < iterations; i++) {
 
-        std::cout << "### Iteration: " << i << " of " << iterations << std::endl;
+        std::cout << "### Iteration: " << i+1 << " of " << iterations << std::endl;
 
         std::cout << "vehicle x: " << vehicle.getX() << std::endl;
         std::cout << "vehicle y: " << vehicle.getY() << std::endl;
