@@ -114,15 +114,13 @@ void animation_car(const std::vector<Eigen::VectorXd> waypoints,const std::vecto
         std::vector<double> cosestindex_y_vec = {cosestindex_y};
 
 
-        plt::plot(wp_x, wp_y, "ro");
-        plt::plot(wp_x2, wp_y2, "mo");
+        // plt::plot(wp_x2, wp_y2, "mo");
         
-        plt::plot(x_target_vec, y_target_vec, "bo");
-        plt::plot(cosestindex_x_vec, cosestindex_y_vec, "ko");
-
-        plt::named_plot("subset of waypoints", wp_x2, wp_y2);
-        plt::named_plot("waypoints", wp_x, wp_y);
-        plt::named_plot("vehicle", vehicle_x, vehicle_y);
+        plt::named_plot("Waypoints", wp_x, wp_y, "ro");
+        plt::named_plot("Target Waypoint", x_target_vec, y_target_vec, "bo");
+        plt::named_plot("Closest Waypoint", cosestindex_x_vec, cosestindex_y_vec, "ko");
+        // plt::named_plot("Subset of Waypoints", wp_x2, wp_y2);
+        plt::named_plot("Vehicle Trajectory", vehicle_x, vehicle_y);
         plt::legend();  // Show the legend to access the plot's properties
         
         plt::xlabel("X");
